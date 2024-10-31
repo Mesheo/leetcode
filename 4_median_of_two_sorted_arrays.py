@@ -1,5 +1,6 @@
 from typing import List
 
+
 # Solucao que Primeiro me veio a cabeça
 class Solution:
     def find_median(self, array: List[int]) -> int:
@@ -54,7 +55,7 @@ class Solution:
 mock_input = [1, 3]
 mock_input2 = [2]
 
-mock_input3 = [1, 5, 4, 2, 3] 
+mock_input3 = [1, 5, 4, 2, 3]
 
 solution = Solution()
 print(solution.findMedianSortedArrays(mock_input, mock_input2))
