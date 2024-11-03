@@ -47,6 +47,14 @@ class SolutionBoaJa:
         return False
 
 
+# Parece mais performatico mas vc precisa criar o set inteiro
+class SolutionALmost:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        if len(set(nums)) == len(nums):
+            return False
+        return True
+
+
 # Com Set fica mais performatico
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
