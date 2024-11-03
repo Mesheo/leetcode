@@ -1,7 +1,5 @@
- 
-
-
 from typing import List
+
 
 # BRUTE FORCE
 class SolutionBruteForce:
@@ -17,7 +15,9 @@ class SolutionBruteForce:
 
         print(nums_dict)
         return 2 in nums_dict.values()
-    
+
+
+# Hashtable not so efficient
 class SolutionHashtable:
     def containsDuplicate(self, nums: List[int]) -> bool:
         nums_dict = {}
@@ -30,12 +30,34 @@ class SolutionHashtable:
         repeated = False
         for value in nums_dict.values():
             if value >= 2:
-                repeated = True   
+                repeated = True
 
-        return repeated    
-          
-        
+        return repeated
 
-nums = [2,14,18,22,22]    
+
+# Aqui ja foi foda
+class SolutionBoaJa:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        nums_dict = {}
+        for i in range(len(nums)):
+            if nums[i] in nums_dict:
+                return True
+            nums_dict[nums[i]] = i
+
+        return False
+
+
+# Com Set fica mais performatico
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        seen = set()
+        for num in nums:
+            if num in seen:
+                return True
+            seen.add(num)
+        return False
+
+
+nums = [2, 14, 18, 22, 22]
 solution = Solution()
-print(solution.containsDuplicate(nums))        
+print(solution.containsDuplicate(nums))
