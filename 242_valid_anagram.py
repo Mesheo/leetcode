@@ -7,7 +7,7 @@ class Solution:
         sorted_t = sorted(t)
 
         return sorted_s == sorted_t
-    
+
 
 class Solution2:
     def isAnagram(self, s: str, t: str) -> bool:
