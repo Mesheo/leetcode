@@ -27,6 +27,7 @@ class Solution:
         charSet = set()
         left_pointer = 0
 
+        # aqui anda com o right pointer    
         for right_pointer in range(len(s)):
             current_char = s[right_pointer]
             current_length = right_pointer - left_pointer + 1
@@ -37,6 +38,7 @@ class Solution:
                 maxLength = max(maxLength, current_length)
             else:
                 while current_char in charSet:
+                    # aqui anda com o left pointer
                     charSet.remove(s[left_pointer])
                     left_pointer += 1
                 charSet.add(current_char)
