@@ -27,7 +27,7 @@ class Solution:
         charSet = set()
         left_pointer = 0
 
-        # aqui anda com o right pointer    
+        # aqui anda com o right pointer
         for right_pointer in range(len(s)):
             current_char = s[right_pointer]
             current_length = right_pointer - left_pointer + 1
